@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* The Ledger Desk Color Palette */
+  --color-canvas: #F1F2ED;
+  --color-surface: #FFFFFF;
+  --color-ink: #1B1F1C;
+  --color-ink-muted: #5B6259;
+  --color-accent-teal: #1F5C52;
+  --color-accent-mustard: #C98A2C;
+  --color-success-moss: #4C7A3F;
+  --color-danger-brick: #A23E2E;
+  --color-rule: #D8DBD2;
+}
+
+/* Custom Scrollbar and Layout Adjustments */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-muted);
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Rubber Ink Stamp Badge Styling */
+.ledger-stamp {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  border-radius: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: multiply;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stamp-interviewing {
+  color: var(--color-accent-teal);
+  border: 1.5px dashed var(--color-accent-teal);
+  transform: rotate(-1.5deg);
+}
+
+.stamp-applied {
+  color: var(--color-accent-mustard);
+  border: 1.5px dotted var(--color-accent-mustard);
+  transform: rotate(2deg);
+}
+
+.stamp-offered {
+  color: var(--color-success-moss);
+  border: 2px double var(--color-success-moss);
+  transform: rotate(-2.5deg);
+}
+
+.stamp-rejected {
+  color: var(--color-danger-brick);
+  border: 1.5px solid var(--color-danger-brick);
+  transform: rotate(3deg);
+}
+
+/* Hand-ruled ledger lines */
+.ledger-ruled-y {
+  background-image: linear-gradient(var(--color-rule) 1px, transparent 1px);
+  background-size: 100% 2.5rem;
+}
+
+.ledger-border {
+  border: 1px solid var(--color-rule);
+}
+
+.ledger-card-index {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  box-shadow: 2px 2px 0px rgba(27, 31, 28, 0.08);
+  border-radius: 2px;
+  position: relative;
+}
+
+.ledger-card-index::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-accent-teal);
+}
+
+.ledger-card-index-mustard::before {
+  background-color: var(--color-accent-mustard);
+}
+
+.ledger-card-index-moss::before {
+  background-color: var(--color-success-moss);
+}
+
+.ledger-card-index-brick::before {
+  background-color: var(--color-danger-brick);
+}
