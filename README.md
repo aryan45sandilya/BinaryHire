@@ -136,55 +136,7 @@ Two seed accounts are pre-loaded:
 
 > The Admin account can publish/edit/delete job specs and manage all candidates.  
 > The Recruiter account can only edit candidates they personally sourced.
-
----
-
-## ✦ API Endpoints
-
-```
-POST   /api/auth/register       Register a new user
-POST   /api/auth/login          Login and receive JWT
-GET    /api/auth/me             Get current user profile
-PUT    /api/auth/settings       Update profile / password
-
-GET    /api/jobs                List all job roles
-POST   /api/jobs                Create job role (auth required)
-PUT    /api/jobs/:id            Update job role (auth required)
-DELETE /api/jobs/:id            Delete job role (auth required)
-
-GET    /api/candidates          List all candidates
-POST   /api/candidates          Add candidate (auth required)
-PUT    /api/candidates/:id      Update candidate (auth required)
-DELETE /api/candidates/:id      Delete candidate (auth required)
-POST   /api/candidates/:id/favorite   Toggle favorite status
-
-GET    /api/logs                Recent activity logs
-POST   /api/ai/screen           AI candidate screening (Gemini)
-POST   /api/ai/insights         AI pipeline insights (Gemini)
----
-
-## ✦ Design System
-
-The UI uses a custom **physical ledger desk** aesthetic defined in `src/index.css`:
-
-| Token | Value | Usage |
-|---|---|---|
-| `--color-canvas` | `#F5F0E8` | Page background (aged paper) |
-| `--color-surface` | `#FDFAF5` | Card surfaces |
-| `--color-ink` | `#1A1A18` | Primary text |
-| `--color-ink-muted` | `#6B6B5A` | Secondary text |
-| `--color-accent-teal` | `#2A7B6F` | Primary actions |
-| `--color-accent-mustard` | `#C4933F` | Highlights, favorites |
-| `--color-success-moss` | `#4A7C59` | Success states |
-| `--color-danger-brick` | `#8B3A3A` | Error & delete actions |
-
-**Fonts:** `Fraunces` (serif headings) · `IBM Plex Mono` (labels) · `IBM Plex Sans` (body)
-
----
-
-<div align="center">
-
-<br/>
+> 
 
 Made with ☕ and a lot of ledger paper.
 
