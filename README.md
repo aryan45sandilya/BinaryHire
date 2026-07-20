@@ -125,41 +125,6 @@ BinaryHire/
 └── vite.config.ts
 ```
 
----
-
-## ✦ Getting Started
-
-### Prerequisites
-
-- **Node.js** `>= 20.x`
-- **npm** `>= 10.x`
-
-### 1 — Install dependencies
-
-```bash
-npm install
-```
-
-### 2 — Set your Gemini API key *(optional)*
-
-Create a `.env` file in the project root:
-
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-> Without a key, AI features run in **demo mock mode** automatically.
-
-### 3 — Run the app
-
-```bash
-npm run dev
-```
-
-Then open **[http://localhost:3000](http://localhost:3000)** in your browser.
-
----
-
 ## ✦ Demo Credentials
 
 Two seed accounts are pre-loaded:
@@ -196,19 +161,6 @@ POST   /api/candidates/:id/favorite   Toggle favorite status
 GET    /api/logs                Recent activity logs
 POST   /api/ai/screen           AI candidate screening (Gemini)
 POST   /api/ai/insights         AI pipeline insights (Gemini)
-```
-
----
-
-## ✦ Scripts
-
-```bash
-npm run dev      # Start development server (Express + Vite HMR)
-npm run build    # Production build (Vite frontend + ESBuild server)
-npm run start    # Run production build
-npm run lint     # TypeScript type check
-```
-
 ---
 
 ## ✦ Design System
